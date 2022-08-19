@@ -10,7 +10,7 @@ public class RadioTest {
     public void shouldIncreaseVolumeInMin() {
         Radio radio = new Radio();
 
-        radio.currentVolume = 0;
+        radio.setCurrentVolume(0);
         radio.increaseVolume();
 
         int expected = 1;
@@ -23,7 +23,7 @@ public class RadioTest {
     public void shouldIncreaseVolumeUnderMax() {
         Radio radio = new Radio();
 
-        radio.currentVolume = 9;
+        radio.setCurrentVolume(9);
         radio.increaseVolume();
 
         int expected = 10;
@@ -36,7 +36,7 @@ public class RadioTest {
     public void shouldIncreaseVolumeAboveMax() {
         Radio radio = new Radio();
 
-        radio.currentVolume = 10;
+        radio.setCurrentVolume(10);
         radio.increaseVolume();
 
         int expected = 10;
@@ -49,7 +49,7 @@ public class RadioTest {
     public void shouldDecreaseVolumeFromMax() {
         Radio radio = new Radio();
 
-        radio.currentVolume = 10;
+        radio.setCurrentVolume(10);
         radio.decreaseVolume();
 
         int expected = 9;
@@ -62,7 +62,7 @@ public class RadioTest {
     public void shouldDecreaseVolumeFromMin() {
         Radio radio = new Radio();
 
-        radio.currentVolume = 0;
+        radio.setCurrentVolume(0);
         radio.decreaseVolume();
 
         int expected = 0;
@@ -74,7 +74,7 @@ public class RadioTest {
     public void shouldDecreaseVolumeAboveMin() {
         Radio radio = new Radio();
 
-        radio.currentVolume = 1;
+        radio.setCurrentVolume(1);
         radio.decreaseVolume();
 
         int expected = 0;
@@ -100,7 +100,7 @@ public class RadioTest {
     public void shouldCheckNextRadioStationInMin() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 0;
+        radio.setCurrentRadioStation(0);
         radio.nextRadioStation();
 
         int expected = 1;
@@ -113,7 +113,7 @@ public class RadioTest {
     public void shouldCheckNextRadioStationInMax() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 9;
+        radio.setCurrentRadioStation(9);
         radio.nextRadioStation();
 
         int expected = 0;
@@ -126,7 +126,7 @@ public class RadioTest {
     public void shouldCheckNextRadioStationUnderMax() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 8;
+        radio.setCurrentRadioStation(8);
         radio.nextRadioStation();
 
         int expected = 9;
@@ -139,7 +139,7 @@ public class RadioTest {
     public void shouldCheckPrevRadioStationInMax() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 9;
+        radio.setCurrentRadioStation(9);
         radio.prevRadioStation();
 
         int expected = 8;
@@ -152,7 +152,7 @@ public class RadioTest {
     public void shouldCheckPrevRadioStationInMin() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 0;
+        radio.setCurrentRadioStation(0);
         radio.prevRadioStation();
 
         int expected = 9;
@@ -165,7 +165,7 @@ public class RadioTest {
     public void shouldCheckPrevRadioStationUnderMin() {
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 1;
+        radio.setCurrentRadioStation(1);
         radio.prevRadioStation();
 
         int expected = 0;

@@ -1,16 +1,20 @@
 package ru.netology.radioman.radio;
 
 public class Radio {
-    public int currentVolume;
-    public int currentRadioStation;
+    private int currentVolume;
+    private int currentRadioStation;
+
     public int getCurrentVolume() {
         return currentVolume;
+    }
+    public void setCurrentVolume(int currentVolume) {
+        this.currentVolume = currentVolume;
     }
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
     public void setCurrentRadioStation(int newCurrentRadioStation) {
-        currentRadioStation = newCurrentRadioStation;
+        this.currentRadioStation = newCurrentRadioStation;
     }
 
     public void increaseVolume() {
