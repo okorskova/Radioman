@@ -8,13 +8,25 @@ public class Radio {
         return currentVolume;
     }
     public void setCurrentVolume(int currentVolume) {
+        if (currentVolume < 0) {
+            return;
+        }
+        if (currentVolume > 10) {
+            return;
+        }
         this.currentVolume = currentVolume;
     }
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
-    public void setCurrentRadioStation(int newCurrentRadioStation) {
-        this.currentRadioStation = newCurrentRadioStation;
+    public void setCurrentRadioStation(int currentRadioStation) {
+        if (currentRadioStation < 0) {
+            return;
+        }
+        if (currentRadioStation > 9) {
+            return;
+        }
+        this.currentRadioStation = currentRadioStation;
     }
 
     public void increaseVolume() {
